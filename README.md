@@ -1,0 +1,2 @@
+# BankNetEntity
+Projekt na studia

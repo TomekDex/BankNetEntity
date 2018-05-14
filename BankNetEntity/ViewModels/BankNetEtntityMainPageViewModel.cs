@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BankNetEntity.ViewModels
 {
-    public class BankNetEntityViewModel : Screen
+    public class BankNetEtntityMainPageViewModel : Screen
     {
         
     }

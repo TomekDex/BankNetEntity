@@ -7,13 +7,13 @@ namespace BankNetEntityDB.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class DB1 : IMigrationMetadata
+    public sealed partial class DB3 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(DB1));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(DB3));
         
         string IMigrationMetadata.Id
         {
-            get { return "201805131116221_DB1"; }
+            get { return "201805141953263_DB3"; }
         }
         
         string IMigrationMetadata.Source

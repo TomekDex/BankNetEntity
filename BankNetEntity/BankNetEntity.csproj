@@ -77,10 +77,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ViewModels\BankNetEntityViewModel.cs" />
-    <Compile Include="Views\BankNetEtntityMainPage.xaml.cs">
-      <DependentUpon>BankNetEtntityMainPage.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="ViewModels\BankNetEtntityMainPageViewModel.cs" />
+    <Compile Include="ViewModels\BankNetEntityLogPageViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bootstrapper.cs" />
@@ -118,7 +116,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\BankNetEtntityMainPage.xaml">
+    <Page Include="Views\BankNetEtntityMainPageView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

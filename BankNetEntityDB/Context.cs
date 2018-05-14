@@ -36,6 +36,29 @@ namespace BankNetEntityDB
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Transfers>().HasRequired(m => m.UserIDsFrom).WithMany(m => m.TransfersFrom).HasForeignKey(m => m.UserIDFrom)
+                 .WillCascadeOnDelete(false);
+            modelBuilder.Entity<Transfers>().HasRequired(m => m.UserIDsTo).WithMany(m => m.TransfersTo).HasForeignKey(m => m.UserIDTo)
+                .WillCascadeOnDelete(false);
+            //modelBuilder.Entity<User>()
+            //     .HasMany(p => p.TransfersTo)
+            //     .WithRequired(p => p.UserIDsTo)
+            //     .HasForeignKey(p => p.UserIDTo)
+            //     .WillCascadeOnDelete(false);
+
+            //modelBuilder.Entity<Match>()
+             
+            // .WithMany(t => t.HomeMatches)
+            // .HasForeignKey(m => m.HomeTeamId)
+            // .WillCascadeOnDelete(false);
+
+            //modelBuilder.Entity<Match>()
+            //            .HasRequired(m => m.GuestTeam)
+            //            .WithMany(t => t.AwayMatches)
+            //            .HasForeignKey(m => m.GuestTeamId)
+            //            .WillCascadeOnDelete(false);
+
+            //Update -Database 
             //modelBuilder.Entity<Papers>().HasKey(p => new { p.Height, p.Width, p.TypeID });
             //modelBuilder.Entity<Prices>().HasKey(p => new { p.Height, p.Width, p.TypeID, p.Quantity });
             //modelBuilder.Entity<OrderFotos>().HasKey(f => new { f.FotoID, f.Height, f.Width, f.TypeID });

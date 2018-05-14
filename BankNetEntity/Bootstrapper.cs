@@ -24,12 +24,12 @@ namespace BankNetEntity
 
             container.Singleton<IWindowManager, WindowManager>();
 
-            container.PerRequest<BankNetEntityViewModel>();
+            container.PerRequest<BankNetEntityLogPageViewModel>();
         }
 
         protected override void OnStartup(object sender, StartupEventArgs e)
         {
-            DisplayRootViewFor<BankNetEntityViewModel>();
+            DisplayRootViewFor<BankNetEntityLogPageViewModel>();
         }
 
         protected override object GetInstance(Type service, string key)

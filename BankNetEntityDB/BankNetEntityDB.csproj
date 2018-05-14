@@ -53,10 +53,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context.cs" />
+    <Compile Include="DBModel\Transfers.cs" />
     <Compile Include="DBModel\User.cs" />
-    <Compile Include="Migrations\201805131116221_DB1.cs" />
-    <Compile Include="Migrations\201805131116221_DB1.Designer.cs">
-      <DependentUpon>201805131116221_DB1.cs</DependentUpon>
+    <Compile Include="Migrations\201805141953263_DB3.cs" />
+    <Compile Include="Migrations\201805141953263_DB3.Designer.cs">
+      <DependentUpon>201805141953263_DB3.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -66,8 +67,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201805131116221_DB1.resx">
-      <DependentUpon>201805131116221_DB1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201805141953263_DB3.resx">
+      <DependentUpon>201805141953263_DB3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,4 +1,4 @@
-﻿<Window x:Class="BankNetEntity.Views.BankNetEntityView"
+﻿<Window x:Class="BankNetEntity.Views.BankNetEtntityMainPageView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -17,7 +17,7 @@
             <RowDefinition Height="439*" />
 
         </Grid.RowDefinitions>
-        <Image Source="" Margin="14,8,679,8" RenderTransformOrigin="0.521,0.888" OpacityMask="#FFB14040" HorizontalAlignment="Center" Width="70">
+        <Image Margin="14,8,679,8" RenderTransformOrigin="0.521,0.888" OpacityMask="#FFB14040" HorizontalAlignment="Center" Width="70">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

@@ -3,22 +3,10 @@ namespace BankNetEntityDB.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class DB3 : DbMigration
+    public partial class DB : DbMigration
     {
         public override void Up()
         {
-            CreateTable(
-                "dbo.Users",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        FirstName = c.String(),
-                        LastName = c.String(),
-                        Pass = c.String(),
-                        Login = c.String(),
-                    })
-                .PrimaryKey(t => t.Id);
-            
             CreateTable(
                 "dbo.Transfers",
                 c => new
@@ -35,6 +23,18 @@ namespace BankNetEntityDB.Migrations
                 .Index(t => t.UserIDTo)
                 .Index(t => t.UserIDFrom);
             
+            CreateTable(
+                "dbo.Users",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        FirstName = c.String(),
+                        LastName = c.String(),
+                        Pass = c.String(),
+                        Login = c.String(),
+                    })
+                .PrimaryKey(t => t.Id);
+            
         }
         
         public override void Down()
@@ -43,8 +43,8 @@ namespace BankNetEntityDB.Migrations
             DropForeignKey("dbo.Transfers", "UserIDFrom", "dbo.Users");
             DropIndex("dbo.Transfers", new[] { "UserIDFrom" });
             DropIndex("dbo.Transfers", new[] { "UserIDTo" });
-            DropTable("dbo.Transfers");
             DropTable("dbo.Users");
+            DropTable("dbo.Transfers");
         }
     }
 }

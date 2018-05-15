@@ -77,6 +77,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Models\Account.cs" />
+    <Compile Include="Models\Clients.cs" />
     <Compile Include="ViewModels\BankNetEtntityMainPageViewModel.cs" />
     <Compile Include="ViewModels\BankNetEntityLogPageViewModel.cs" />
   </ItemGroup>
@@ -109,7 +111,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\" />
+    <ProjectReference Include="..\BankNetEntityDB\BankNetEntityDB.csproj">
+      <Project>{9B3A4693-9558-4C25-BB26-CF2A9297B2E1}</Project>
+      <Name>BankNetEntityDB</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Page Include="Views\BankNetEntityLogPageView.xaml">

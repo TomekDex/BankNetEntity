@@ -17,7 +17,7 @@ namespace BankNetEntityDB.DBModel
         public int UserIDTo { get; set; }
         public int UserIDFrom { get; set; }
 
-        public User UserIDsTo { get; set; }
-        public User UserIDsFrom { get; set; }
+        public User UserTo { get; set; }
+        public User UserFrom { get; set; }
     }
 }

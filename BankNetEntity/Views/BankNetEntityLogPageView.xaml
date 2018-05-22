@@ -7,7 +7,7 @@
         Title="BankNetEntity" >
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="https://images.pexels.com/photos/50987/money-card-business-credit-card-50987.jpeg"/>
+            <ImageBrush ImageSource="Img/bank1.jpg"/>
         </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="381"/>
@@ -21,7 +21,7 @@
         <Image Margin="97,31,82,27" RenderTransformOrigin="0.521,0.888" OpacityMask="#FF762D2D" HorizontalAlignment="Center" Width="202"/>
         <TextBox HorizontalAlignment="Left" Height="30" Margin="97,82,0,61" TextWrapping="Wrap" Text="{Binding Login}" VerticalAlignment="Center" Width="202" Grid.Row="1"/>
         <TextBlock HorizontalAlignment="Left" Margin="97,10,0,0" TextWrapping="Wrap" Text="Biscuit lollipop bonbon carrot cake tiramisu cake croissant chupa chups fruitcake. Chupa chups gummies tart bear claw. " VerticalAlignment="Top" Height="65" Width="202" Grid.Row="1" Foreground="White"/>
-        <PasswordBox HorizontalAlignment="Left" Margin="97,116,0,25" VerticalAlignment="Center" Height="32" Width="202" Grid.Row="1" />
+        <PasswordBox HorizontalAlignment="Left" Margin="97,117,0,24" VerticalAlignment="Center" Height="32" Width="202" Grid.Row="1" />
         <Button x:Name="LogIn" Content="LOG IN" HorizontalAlignment="Left" Height="32" Margin="157,0,0,0" VerticalAlignment="Top" Width="84" Grid.Row="2"/>
     </Grid>
 </Window>

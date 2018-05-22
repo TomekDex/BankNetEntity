@@ -79,8 +79,10 @@
     </Compile>
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\Clients.cs" />
-    <Compile Include="ViewModels\BankNetEtntityMainPageViewModel.cs" />
+    <Compile Include="ViewModels\BankNetEtnityMainPageViewModel.cs" />
+    <Compile Include="ViewModels\BankNetEtntityHistoryPageViewModel.cs" />
     <Compile Include="ViewModels\BankNetEntityLogPageViewModel.cs" />
+    <Compile Include="ViewModels\BankNetEtntitySendPageViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bootstrapper.cs" />
@@ -121,10 +123,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\BankNetEtntitySendPageView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\BankNetEtntityMainPageView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\BankNetEtntityHistoryPageView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\bank1.jpg" />
+    <Resource Include="Img\bank2.jpg" />
+    <Resource Include="Img\logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

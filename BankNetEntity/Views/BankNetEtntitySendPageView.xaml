@@ -35,27 +35,17 @@
                 <SolidColorBrush Color="#FF5D95D3" Opacity="0.7"/>
             </Rectangle.Fill>
         </Rectangle>
-        <Rectangle HorizontalAlignment="Left" Height="420" Margin="10,9,0,0" Grid.Row="1" VerticalAlignment="Top" Width="743" StrokeThickness="0">
+        <Rectangle HorizontalAlignment="Left" Height="419" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="743" StrokeThickness="0">
             <Rectangle.Fill>
-                <SolidColorBrush Color="#FF08121D" Opacity="0.19"/>
+                <SolidColorBrush Color="#FF5D95D3" Opacity="0.19"/>
             </Rectangle.Fill>
         </Rectangle>
         <Button Content="SALDO" HorizontalAlignment="Left" Height="29" Margin="526,30,0,0" VerticalAlignment="Top" Width="72" FontWeight="Bold" BorderBrush="{x:Null}" Foreground="#FF0A406E" Background="{x:Null}"/>
         <Button Content="PRZELEWY" HorizontalAlignment="Left" Height="29" Margin="604,30,0,0" VerticalAlignment="Top" Width="72" Background="{x:Null}" FontWeight="Bold" BorderBrush="{x:Null}" Foreground="#FF0A406E"/>
         <Button Content="HISTORIA" HorizontalAlignment="Left" Height="29" Margin="681,30,0,0" VerticalAlignment="Top" Width="72" Background="{x:Null}" FontWeight="Bold" BorderBrush="{x:Null}" Foreground="#FF0A406E"/>
-        <Grid Margin="130,130" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBox HorizontalAlignment="Left" Height="42" Margin="133,17,0,0" TextWrapping="Wrap" Text="{Binding Balance}" VerticalAlignment="Top" Width="282" BorderBrush="{x:Null}" Foreground="#FF09577C" SelectionBrush="#FF8BB5E0">
-                <TextBox.Background>
-                    <SolidColorBrush Color="#FF8BB5E0" Opacity="0.6"/>
-                </TextBox.Background>
-            </TextBox>
-            <Label Content="Obecne Saldo" HorizontalAlignment="Left" Margin="-26,28,0,44" FontSize="18" FontWeight="Bold" Foreground="#FF395C7F" />
-            <Label Content="Obciążenia" HorizontalAlignment="Left" Margin="6,72,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" Foreground="#FF395C7F"/>
-            <TextBox HorizontalAlignment="Left" Height="42" Margin="133,64,0,0" TextWrapping="Wrap" Text="{Binding Load}" VerticalAlignment="Top" Width="282" BorderBrush="{x:Null}" Foreground="#FF09577C" SelectionBrush="#FF8BB5E0">
-                <TextBox.Background>
-                    <SolidColorBrush Color="#FF8BB5E0" Opacity="0.6"/>
-                </TextBox.Background>
-            </TextBox>
-        </Grid>
+        <Button x:Name="SendTransfer" Content="Wykonaj" HorizontalAlignment="Left" Height="36" Margin="321,287,0,0" Grid.Row="1" VerticalAlignment="Top" Width="126"/>
+        <TextBox x:Name="Surname" Text="Nazwisko"  HorizontalAlignment="Left" Height="23" Margin="321,149,0,0" Grid.Row="1" TextWrapping="Wrap"  VerticalAlignment="Top" Width="126"/>
+        <TextBox x:Name="AccNumber" Text="Number konta" HorizontalAlignment="Left" Height="23" Margin="321,190,0,0" Grid.Row="1" TextWrapping="Wrap"  VerticalAlignment="Top" Width="126"/>
+        <TextBox x:Name="Sum" Text="Suma przelewu" HorizontalAlignment="Left" Height="23" Margin="321,227,0,0" Grid.Row="1" TextWrapping="Wrap"  VerticalAlignment="Top" Width="126"/>
     </Grid>
 </Window>

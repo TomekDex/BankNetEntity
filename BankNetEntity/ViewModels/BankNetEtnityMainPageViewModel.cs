@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Caliburn.Micro;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BankNetEntity.ViewModels
 {
-    class BankNetEtnityMainPageViewModel
+    class BankNetEtnityMainPageViewModel : Screen
     {
         string balance = "twoje saldo";
         string load = "twoje obciążenie";
@@ -20,7 +21,8 @@ namespace BankNetEntity.ViewModels
             set
             {
                 balance = value;
-                
+                NotifyOfPropertyChange(() => Balance);
+
             }
         }
 
@@ -34,7 +36,8 @@ namespace BankNetEntity.ViewModels
             set
             {
                 load = value;
-               
+                NotifyOfPropertyChange(() => Load);
+
             }
         }
     }

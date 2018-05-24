@@ -81,7 +81,7 @@
     <Compile Include="Models\Clients.cs" />
     <Compile Include="BoundPasswordBox.cs" />
     <Compile Include="ViewModels\BankNetEntityRegistryPageViewModel.cs" />
-    <Compile Include="ViewModels\BankNetEtnityMainPageViewModel.cs" />
+    <Compile Include="ViewModels\BankNetEtntityMainPageViewModel.cs" />
     <Compile Include="ViewModels\BankNetEtntityHistoryPageViewModel.cs" />
     <Compile Include="ViewModels\BankNetEntityLogPageViewModel.cs" />
     <Compile Include="ViewModels\BankNetEtntitySendPageViewModel.cs" />

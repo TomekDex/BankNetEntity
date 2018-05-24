@@ -15,7 +15,7 @@ namespace BankNetEntityDBTest
         {
             ContextBankNetEntityDB DBContext = new ContextBankNetEntityDB();
 
-        //  var a =  DBContext.User.Add(new User() { FirstName ="Tomasz", LastName = "Juszczak", Login = ""})
+            var a = DBContext.User.ToList();
             //fotoAppDBContext.SaveChanges();
         }
     }

@@ -46,7 +46,7 @@ namespace BankNetEntity.ViewModels
         {
             if (Account.account.LogIn(Login, UserPassword) == Account.ReturnCode.Succes)
             {
-                _windowManager.ShowWindow(new BankNetEtnityMainPageViewModel() { User = Account.account.User, Balance = Account.account.Balance.ToString() });
+                _windowManager.ShowWindow(new BankNetEtntityMainPageViewModel() { User = Account.account.User, Balance = Account.account.Balance.ToString() });
 
                 this.TryClose();
             }

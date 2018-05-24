@@ -8,7 +8,7 @@ using BankNetEntityDB.DBModel;
 
 namespace BankNetEntity.ViewModels
 {
-    class BankNetEtnityMainPageViewModel : Screen
+    public class BankNetEtntityMainPageViewModel : Screen
     {
         private readonly WindowManager _windowManager = new WindowManager();
         string balance = "twoje saldo";

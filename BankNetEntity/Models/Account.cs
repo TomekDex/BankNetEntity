@@ -88,7 +88,7 @@ namespace BankNetEntity.Models
 
                 User userFrom = GetSystemUser();
 
-                DB.Transfers.Add(new Transfers { Title = title, UserFrom = userFrom, UserTo = User });
+                DB.Transfers.Add(new Transfers { Title = title, UserFrom = userFrom, UserTo = User, Value = result });
                 DB.SaveChanges();
 
                 return ReturnCode.Succes;
@@ -178,6 +178,7 @@ namespace BankNetEntity.Models
         {
             return TryCatchWithReturnCode(() =>
             {
+                var aaaa = DB.User.ToList();
                 if (UserExist(login))
                     return ReturnCode.Fail;
                 if (PaswordValide(ref pass) != PaswordValideCode.Good)
@@ -201,6 +202,7 @@ namespace BankNetEntity.Models
                     DB.SaveChanges();
                     return ReturnCode.Fail;
                 }
+                Payment("500", "Na Start");
                 return ReturnCode.Succes;
             });
         }

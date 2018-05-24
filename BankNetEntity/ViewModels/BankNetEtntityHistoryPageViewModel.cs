@@ -10,6 +10,6 @@ namespace BankNetEntity.ViewModels
 {
     public class BankNetEtntityHistoryPageViewModel : Screen
     {
-        
+        private readonly WindowManager _windowManager = new WindowManager();
     }
 }

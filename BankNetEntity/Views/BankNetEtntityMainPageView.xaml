@@ -44,18 +44,40 @@
         <Button Content="PRZELEWY" HorizontalAlignment="Left" Height="29" Margin="604,30,0,0" VerticalAlignment="Top" Width="72" Background="{x:Null}" FontWeight="Bold" BorderBrush="{x:Null}" Foreground="#FF0A406E"/>
         <Button Content="HISTORIA" HorizontalAlignment="Left" Height="29" Margin="681,30,0,0" VerticalAlignment="Top" Width="72" Background="{x:Null}" FontWeight="Bold" BorderBrush="{x:Null}" Foreground="#FF0A406E"/>
         <Grid Margin="130,130" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBox HorizontalAlignment="Left" Height="42" Margin="133,17,0,0" TextWrapping="Wrap" Text="{Binding Balance}" VerticalAlignment="Top" Width="282" BorderBrush="{x:Null}" Foreground="#FF09577C" SelectionBrush="#FF8BB5E0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="354*"/>
+                <ColumnDefinition Width="61*"/>
+            </Grid.ColumnDefinitions>
+            <TextBox HorizontalAlignment="Left" Height="42" Margin="133,17,0,0" IsEnabled="False" TextWrapping="Wrap" Text="{Binding Balance}" VerticalAlignment="Top" Width="282" BorderBrush="{x:Null}" Foreground="#FF09577C" SelectionBrush="#FF8BB5E0" Grid.ColumnSpan="2">
                 <TextBox.Background>
                     <SolidColorBrush Color="#FF8BB5E0" Opacity="0.6"/>
                 </TextBox.Background>
             </TextBox>
             <Label Content="Obecne Saldo" HorizontalAlignment="Left" Margin="-26,28,0,44" FontSize="18" FontWeight="Bold" Foreground="#FF395C7F" />
             <Label Content="Obciążenia" HorizontalAlignment="Left" Margin="6,72,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" Foreground="#FF395C7F"/>
-            <TextBox HorizontalAlignment="Left" Height="42" Margin="133,64,0,0" TextWrapping="Wrap" Text="{Binding Load}" VerticalAlignment="Top" Width="282" BorderBrush="{x:Null}" Foreground="#FF09577C" SelectionBrush="#FF8BB5E0">
+            <TextBox HorizontalAlignment="Left" Height="42" Margin="133,64,0,0" TextWrapping="Wrap" Text="{Binding Load}" VerticalAlignment="Top" Width="282" BorderBrush="{x:Null}" Foreground="#FF09577C" SelectionBrush="#FF8BB5E0" Grid.ColumnSpan="2">
                 <TextBox.Background>
                     <SolidColorBrush Color="#FF8BB5E0" Opacity="0.6"/>
                 </TextBox.Background>
             </TextBox>
+            <TextBox HorizontalAlignment="Left" Height="42" Margin="133,-30,0,0" TextWrapping="Wrap" Text="{Binding Id}" IsEnabled="False" VerticalAlignment="Top" Width="282" BorderBrush="{x:Null}" Foreground="#FF09577C" SelectionBrush="#FF8BB5E0" Grid.ColumnSpan="2">
+                <TextBox.Background>
+                    <SolidColorBrush Color="#FF8BB5E0" Opacity="0.6"/>
+                </TextBox.Background>
+            </TextBox>
+            <Label Content="ID" HorizontalAlignment="Left" Margin="-26,-22,0,94" FontSize="18" FontWeight="Bold" Foreground="#FF395C7F" />
+            <Label Content="Imie" HorizontalAlignment="Left" Margin="6,111,0,-39" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" Foreground="#FF395C7F"/>
+            <TextBox HorizontalAlignment="Left" Height="42" Margin="133,111,0,-47" IsEnabled="False" TextWrapping="Wrap" Text="{Binding FirstName}" VerticalAlignment="Top" Width="282" BorderBrush="{x:Null}" Foreground="#FF09577C" SelectionBrush="#FF8BB5E0" Grid.ColumnSpan="2">
+                <TextBox.Background>
+                    <SolidColorBrush Color="#FF8BB5E0" Opacity="0.6"/>
+                </TextBox.Background>
+            </TextBox>
+            <TextBox HorizontalAlignment="Left" Height="42" Margin="133,158,0,-94" IsEnabled="False" TextWrapping="Wrap" Text="{Binding LastName}" VerticalAlignment="Top" Width="282" BorderBrush="{x:Null}" Foreground="#FF09577C" SelectionBrush="#FF8BB5E0" Grid.ColumnSpan="2">
+                <TextBox.Background>
+                    <SolidColorBrush Color="#FF8BB5E0" Opacity="0.6"/>
+                </TextBox.Background>
+            </TextBox>
+            <Label Content="Nazwisko" HorizontalAlignment="Left" Margin="6,158,0,-86" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" Foreground="#FF395C7F"/>
         </Grid>
     </Grid>
 </Window>

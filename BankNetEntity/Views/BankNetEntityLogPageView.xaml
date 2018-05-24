@@ -4,7 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
+        xmlns:pwbx="clr-namespace:BankNetEntity"
         Title="BankNetEntity" >
+    
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="../Img/bank1.jpg"/>
@@ -21,7 +23,8 @@
         <Image Margin="97,31,82,27" RenderTransformOrigin="0.521,0.888" OpacityMask="#FF762D2D" HorizontalAlignment="Center" Width="202"/>
         <TextBox HorizontalAlignment="Left" Height="30" Margin="97,82,0,61" TextWrapping="Wrap" Text="{Binding Login}" VerticalAlignment="Center" Width="202" Grid.Row="1"/>
         <TextBlock HorizontalAlignment="Left" Margin="97,10,0,0" TextWrapping="Wrap" Text="Biscuit lollipop bonbon carrot cake tiramisu cake croissant chupa chups fruitcake. Chupa chups gummies tart bear claw. " VerticalAlignment="Top" Height="65" Width="202" Grid.Row="1" Foreground="White"/>
-        <PasswordBox HorizontalAlignment="Left" Margin="97,117,0,24" VerticalAlignment="Center" Height="32" Width="202" Grid.Row="1" />
-        <Button x:Name="LogIn" Content="LOG IN" HorizontalAlignment="Left" Height="32" Margin="157,0,0,0" VerticalAlignment="Top" Width="84" Grid.Row="2"/>
+        <PasswordBox pwbx:BoundPasswordBox.BoundPassword="{Binding UserPassword, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,NotifyOnValidationError=True,ValidatesOnDataErrors=True}" HorizontalAlignment="Left" Margin="97,117,0,24" VerticalAlignment="Center" Height="32" Width="202" Grid.Row="1" />
+        <Button x:Name="LogIn" Content="LOG IN" HorizontalAlignment="Left" Height="32" Margin="97,0,0,0" VerticalAlignment="Top" Width="84" Grid.Row="2"/>
+        <Button x:Name="Registry" Content="REGISTRY" HorizontalAlignment="Left" Height="32" Margin="215,0,0,0" VerticalAlignment="Top" Width="84" Grid.Row="2"/>
     </Grid>
 </Window>

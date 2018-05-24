@@ -79,6 +79,8 @@
     </Compile>
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\Clients.cs" />
+    <Compile Include="BoundPasswordBox.cs" />
+    <Compile Include="ViewModels\BankNetEntityRegistryPageViewModel.cs" />
     <Compile Include="ViewModels\BankNetEtnityMainPageViewModel.cs" />
     <Compile Include="ViewModels\BankNetEtntityHistoryPageViewModel.cs" />
     <Compile Include="ViewModels\BankNetEntityLogPageViewModel.cs" />
@@ -119,6 +121,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Views\BankNetEntityRegistryPageView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\BankNetEntityLogPageView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

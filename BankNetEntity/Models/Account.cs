@@ -16,7 +16,9 @@ namespace BankNetEntity.Models
         private static Regex exNr = new Regex(@"\d", RegexOptions.Compiled);
         private static Regex exName = new Regex(@"\w+", RegexOptions.Compiled);
 
-        private User User { get; set; }
+        public static Account account = new Account();
+
+        public User User { get; set; }
         public double Balance
         {
             get
@@ -26,6 +28,26 @@ namespace BankNetEntity.Models
                 try
                 {
                     return User.TransfersTo.Sum(a => a.Value) - User.TransfersFrom.Sum(a => a.Value);
+                }
+                catch (Exception ex)
+                {
+                    return 0;
+#if DEBUG
+                    throw ex;
+#endif
+                }
+            }
+        }
+
+        public int Id
+        {
+            get
+            {
+                if (User == null)
+                    return 0;
+                try
+                {
+                    return User.Id;
                 }
                 catch (Exception ex)
                 {
@@ -133,6 +155,7 @@ namespace BankNetEntity.Models
         {
             return TryCatchWithReturnCode(() =>
             {
+                var aa = DB.User.ToList();
                 User = DB.User.SingleOrDefault(a => a.Login == login.Trim());
                 if (User == null)
                     return ReturnCode.NoUser;
@@ -244,10 +267,9 @@ namespace BankNetEntity.Models
 
         static bool VerifyMd5Hash(MD5 md5Hash, string input, string hash)
         {
-            string hashOfInput = GetMd5Hash(md5Hash, input);
             StringComparer comparer = StringComparer.OrdinalIgnoreCase;
 
-            return 0 == comparer.Compare(hashOfInput, hash);
+            return 0 == comparer.Compare(input, hash);
         }
     }
 }

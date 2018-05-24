@@ -9,6 +9,7 @@ namespace BankNetEntity.ViewModels
 {
     class BankNetEtntitySendPageViewModel : Screen
     {
+        private readonly WindowManager _windowManager = new WindowManager();
         string surname = "nazwisko";
         string accnumber = "numer konta";
         string sum = "kwota przelewu";

@@ -5,14 +5,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace BankNetEntity.ViewModels
 {
     class BankNetEtntitySendPageViewModel : Screen
     {
         private readonly WindowManager _windowManager = new WindowManager();
-        string title = "nazwisko";
-        string accnumber = "numer konta";
+        string title = "tytuł";
+        string loginTarget = "login osoby docelowej";
         string sum = "kwota przelewu";
         public string Title
         {
@@ -30,17 +31,17 @@ namespace BankNetEntity.ViewModels
             }
         }
 
-        public string AccNumber
+        public string LoginTarget
         {
             get
             {
-                return accnumber;
+                return loginTarget;
             }
 
             set
             {
-                accnumber = value;
-                NotifyOfPropertyChange(() => AccNumber);
+                loginTarget = value;
+                NotifyOfPropertyChange(() => LoginTarget);
 
             }
 
@@ -80,6 +81,17 @@ namespace BankNetEntity.ViewModels
             _windowManager.ShowWindow(new BankNetEtntityHistoryPageViewModel());
 
             this.TryClose();
+        }
+
+        public void SendTransfer()
+        {
+            if (Account.account.Transfer(LoginTarget, Sum, Title) == Account.ReturnCode.Succes)
+            {
+                MessageBox.Show("Succes");
+                Saldo();
+            }
+            else
+                MessageBox.Show("error");
         }
     }
 }

@@ -60,12 +60,12 @@
                     <SolidColorBrush Color="#FF8BB5E0" Opacity="0.6"/>
                 </TextBox.Background>
             </TextBox>
-            <TextBox HorizontalAlignment="Left" Height="42" Margin="133,-30,0,0" TextWrapping="Wrap" Text="{Binding Id}" IsEnabled="False" VerticalAlignment="Top" Width="282" BorderBrush="{x:Null}" Foreground="#FF09577C" SelectionBrush="#FF8BB5E0" Grid.ColumnSpan="2">
+            <TextBox HorizontalAlignment="Left" Height="42" Margin="133,-30,0,0" TextWrapping="Wrap" Text="{Binding Login}" IsEnabled="False" VerticalAlignment="Top" Width="282" BorderBrush="{x:Null}" Foreground="#FF09577C" SelectionBrush="#FF8BB5E0" Grid.ColumnSpan="2">
                 <TextBox.Background>
                     <SolidColorBrush Color="#FF8BB5E0" Opacity="0.6"/>
                 </TextBox.Background>
             </TextBox>
-            <Label Content="ID" HorizontalAlignment="Left" Margin="-26,-22,0,94" FontSize="18" FontWeight="Bold" Foreground="#FF395C7F" />
+            <Label Content="Login" HorizontalAlignment="Left" Margin="-26,-22,0,94" FontSize="18" FontWeight="Bold" Foreground="#FF395C7F" />
             <Label Content="Imie" HorizontalAlignment="Left" Margin="6,111,0,-39" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" Foreground="#FF395C7F"/>
             <TextBox HorizontalAlignment="Left" Height="42" Margin="133,111,0,-47" IsEnabled="False" TextWrapping="Wrap" Text="{Binding FirstName}" VerticalAlignment="Top" Width="282" BorderBrush="{x:Null}" Foreground="#FF09577C" SelectionBrush="#FF8BB5E0" Grid.ColumnSpan="2">
                 <TextBox.Background>

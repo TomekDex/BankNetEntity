@@ -31,8 +31,6 @@ namespace BankNetEntityDB
             //if (Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location).Contains("assembly"))
             //    return @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\BankNetEntity\BankNetEntity\BankNetEntityDB\BankNetEntityDB.mdf;Integrated Security=True;MultipleActiveResultSets=True;App=EntityFramework";
             SCSB.Add("AttachDbFilename", Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\BankNetEntityDB.mdf");
-
-            File.WriteAllText("C:\\a.txt", SCSB.ConnectionString);
             return SCSB.ConnectionString;
         }
         public DbSet<User> User { get; set; }

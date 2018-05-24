@@ -59,10 +59,7 @@ namespace BankNetEntity.ViewModels
                 NotifyOfPropertyChange(() => Sum);
 
             }
-
         }
-
-
 
         public void Saldo()
         {

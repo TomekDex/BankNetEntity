@@ -70,9 +70,9 @@
     <Compile Include="Context.cs" />
     <Compile Include="DBModel\Transfers.cs" />
     <Compile Include="DBModel\User.cs" />
-    <Compile Include="Migrations\201805151832019_DB.cs" />
-    <Compile Include="Migrations\201805151832019_DB.Designer.cs">
-      <DependentUpon>201805151832019_DB.cs</DependentUpon>
+    <Compile Include="Migrations\201805241207000_DB.cs" />
+    <Compile Include="Migrations\201805241207000_DB.Designer.cs">
+      <DependentUpon>201805241207000_DB.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -103,8 +103,8 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201805151832019_DB.resx">
-      <DependentUpon>201805151832019_DB.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201805241207000_DB.resx">
+      <DependentUpon>201805241207000_DB.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

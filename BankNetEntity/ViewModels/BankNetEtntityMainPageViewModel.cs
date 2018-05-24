@@ -14,7 +14,7 @@ namespace BankNetEntity.ViewModels
         private readonly WindowManager _windowManager = new WindowManager();
         string balance = "twoje saldo";
         string load = "twoje obciążenie";
-        string id = "";
+        string login = "";
         string firstName = "";
         string lastName = "";
         public string Balance
@@ -32,17 +32,17 @@ namespace BankNetEntity.ViewModels
             }
         }
 
-        public string Id
+        public string Login
         {
             get
             {
-                return id;
+                return login;
             }
 
             set
             {
-                id = value;
-                NotifyOfPropertyChange(() => Id);
+                login = value;
+                NotifyOfPropertyChange(() => Login);
 
             }
         }
@@ -99,7 +99,7 @@ namespace BankNetEntity.ViewModels
             internal set
             {
                 user = value;
-                Id = user.Id.ToString();
+                Login = user.Login;
                 FirstName = user.FirstName;
                 LastName = user.LastName;
             }

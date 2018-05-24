@@ -88,7 +88,7 @@ namespace BankNetEntity.Models
 
                 User userFrom = GetSystemUser();
 
-                DB.Transfers.Add(new Transfers { Title = title, UserFrom = userFrom, UserTo = User, Value = result });
+                DB.Transfers.Add(new Transfers { Title = title, UserFrom = userFrom, UserTo = User, Value = result, Date = DateTime.Now });
                 DB.SaveChanges();
 
                 return ReturnCode.Succes;
@@ -137,7 +137,7 @@ namespace BankNetEntity.Models
                 if (Balance < result)
                     return ReturnCode.Fail;
 
-                DB.Transfers.Add(new Transfers { Title = title, UserFrom = User, UserTo = userTarget });
+                DB.Transfers.Add(new Transfers { Title = title, UserFrom = User, UserTo = userTarget, Value = result, Date = DateTime.Now });
                 DB.SaveChanges();
 
                 return ReturnCode.Succes;

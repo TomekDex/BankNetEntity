@@ -137,9 +137,15 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Img\bank1.jpg" />
-    <Resource Include="Img\bank2.jpg" />
-    <Resource Include="Img\logo.png" />
+    <Resource Include="Img\bank1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Img\bank2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Img\logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -7,7 +7,7 @@
         Title="BankNetEntity" >
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="Img/bank2.jpg"/>
+            <ImageBrush ImageSource="../Img/bank2.jpg"/>
         </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="763"/>

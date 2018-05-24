@@ -44,8 +44,8 @@
         <Button Content="PRZELEWY" HorizontalAlignment="Left" Height="29" Margin="604,30,0,0" VerticalAlignment="Top" Width="72" Background="{x:Null}" FontWeight="Bold" BorderBrush="{x:Null}" Foreground="#FF0A406E"/>
         <Button Content="HISTORIA" HorizontalAlignment="Left" Height="29" Margin="681,30,0,0" VerticalAlignment="Top" Width="72" Background="{x:Null}" FontWeight="Bold" BorderBrush="{x:Null}" Foreground="#FF0A406E"/>
         <Button x:Name="SendTransfer" Content="Wykonaj" HorizontalAlignment="Left" Height="36" Margin="321,287,0,0" Grid.Row="1" VerticalAlignment="Top" Width="126"/>
-        <TextBox Name="{Binding Surname}" HorizontalAlignment="Left" Height="23" Margin="321,149,0,0" Grid.Row="1" TextWrapping="Wrap"  VerticalAlignment="Top" Width="126" Text="Nazwisko"/>
-        <TextBox Name="{Binding AccNumber}" HorizontalAlignment="Left" Height="23" Margin="321,190,0,0" Grid.Row="1" TextWrapping="Wrap"  VerticalAlignment="Top" Width="126" Text="Numer konta"/>
-        <TextBox Name="{Binding Sum}" HorizontalAlignment="Left" Height="23" Margin="321,227,0,0" Grid.Row="1" TextWrapping="Wrap"  VerticalAlignment="Top" Width="126" Text="Kwota"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="321,149,0,0" Grid.Row="1" TextWrapping="Wrap"  VerticalAlignment="Top" Width="126" Text="{Binding Surname}"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="321,190,0,0" Grid.Row="1" TextWrapping="Wrap"  VerticalAlignment="Top" Width="126" Text="{Binding AccNumber}"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="321,227,0,0" Grid.Row="1" TextWrapping="Wrap"  VerticalAlignment="Top" Width="126" Text="{Binding Sum}"/>
     </Grid>
 </Window>

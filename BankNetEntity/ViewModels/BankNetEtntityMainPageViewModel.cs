@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BankNetEntityDB.DBModel;
+using BankNetEntity.Models;
 
 namespace BankNetEntity.ViewModels
 {
@@ -102,6 +103,25 @@ namespace BankNetEntity.ViewModels
                 FirstName = user.FirstName;
                 LastName = user.LastName;
             }
+        }
+
+        public void Saldo()
+        {
+            _windowManager.ShowWindow(new BankNetEtntityMainPageViewModel() { User = Account.account.User, Balance = Account.account.Balance.ToString() });
+
+            this.TryClose();
+        }
+        public void Przelewy()
+        {
+            _windowManager.ShowWindow(new BankNetEtntitySendPageViewModel());
+
+            this.TryClose();
+        }
+        public void Historia()
+        {
+            _windowManager.ShowWindow(new BankNetEtntityHistoryPageViewModel());
+
+            this.TryClose();
         }
     }
 }

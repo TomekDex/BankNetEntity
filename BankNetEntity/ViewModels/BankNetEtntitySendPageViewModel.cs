@@ -1,4 +1,5 @@
-﻿using Caliburn.Micro;
+﻿using BankNetEntity.Models;
+using Caliburn.Micro;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,21 +11,21 @@ namespace BankNetEntity.ViewModels
     class BankNetEtntitySendPageViewModel : Screen
     {
         private readonly WindowManager _windowManager = new WindowManager();
-        string surname = "nazwisko";
+        string title = "nazwisko";
         string accnumber = "numer konta";
         string sum = "kwota przelewu";
-        public string Surname
+        public string Title
         {
             get
             {
-                return surname;
-                
+                return title;
+
             }
 
             set
             {
-                surname = value;
-                NotifyOfPropertyChange(() => Surname);
+                title = value;
+                NotifyOfPropertyChange(() => Title);
 
             }
         }
@@ -58,6 +59,27 @@ namespace BankNetEntity.ViewModels
 
             }
 
+        }
+
+
+
+        public void Saldo()
+        {
+            _windowManager.ShowWindow(new BankNetEtntityMainPageViewModel() { User = Account.account.User, Balance = Account.account.Balance.ToString() });
+
+            this.TryClose();
+        }
+        public void Przelewy()
+        {
+            _windowManager.ShowWindow(new BankNetEtntitySendPageViewModel());
+
+            this.TryClose();
+        }
+        public void Historia()
+        {
+            _windowManager.ShowWindow(new BankNetEtntityHistoryPageViewModel());
+
+            this.TryClose();
         }
     }
 }
